@@ -1,0 +1,21 @@
+{
+  "name": "nodon",
+  "version": "1.0.0",
+  "main": "index.js",
+  "bin": {
+    "nodon": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node cli.ts"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}

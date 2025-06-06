@@ -1,0 +1,20 @@
+# Ignore node_modules folder
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Optional npm cache folder
+.npm
+
+# Optional dotenv environment variables file
+.env
+
+# Dist folder (if you build your app)
+dist/
+
+# OS files
+.DS_Store
+Thumbs.db
