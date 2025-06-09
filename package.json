@@ -1,21 +1,28 @@
 {
   "name": "nodon",
   "version": "1.0.0",
-  "main": "index.js",
   "bin": {
-    "nodon": "dist/cli.js"
+    "nodon": "./dist/cli.js"
   },
   "scripts": {
     "build": "tsc",
-    "dev": "ts-node cli.ts"
+    "dev": "tsx cli.ts"
   },
   "type": "module",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "keywords": [
+    "cli",
+    "node",
+    "express",
+    "scaffold",
+    "backend",
+    "typescript"
+  ],
+  "author": "Omprakash Chauhan",
+  "license": "MIT",
+  "description": "Nodon - A CLI to scaffold Node.js + Express backend projects in seconds.",
   "devDependencies": {
-    "ts-node": "^10.9.2",
+    "@types/fs-extra": "^11.0.4",
+    "tsx": "^4.19.4",
     "typescript": "^5.8.3"
   },
   "dependencies": {

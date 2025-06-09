@@ -1,7 +1,7 @@
 import * as fs from 'fs-extra';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { logInfo, logSuccess } from './utils/utils';
+import { logInfo, logSuccess } from './utils/utils.js';
 
 // Hack for __dirname in ES modules
 const __filename = fileURLToPath(import.meta.url);
