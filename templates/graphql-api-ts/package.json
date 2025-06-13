@@ -1,0 +1,31 @@
+{
+  "name": "express-rest-api",
+  "version": "1.0.0",
+  "description": "Advanced REST API Template with Express.js",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "node --watch src/app.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "helmet": "^7.0.0",
+    "morgan": "^1.10.0",
+    "mongoose": "^8.0.0",
+    "winston": "^3.10.0",
+    "pino": "^8.17.0"
+  },
+  "keywords": [
+    "express",
+    "rest-api",
+    "nodejs",
+    "mongoose",
+    "middleware",
+    "logging"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
