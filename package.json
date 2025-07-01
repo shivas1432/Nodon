@@ -1,8 +1,8 @@
 {
-  "name": "nodon",
-  "version": "1.0.1",
+  "name": "create-nodon",
+  "version": "1.0.3",
   "bin": {
-    "nodon": "dist/cli.js"
+    "create-nodon": "dist/cli.js"
   },
   "scripts": {
     "build": "tsc",
@@ -22,6 +22,7 @@
   "description": "Nodon - A CLI to scaffold Node.js + Express backend projects in seconds.",
   "devDependencies": {
     "@types/fs-extra": "^11.0.4",
+    "@types/inquirer": "^9.0.8",
     "tsx": "^4.19.4",
     "typescript": "^5.8.3"
   },

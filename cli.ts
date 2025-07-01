@@ -15,17 +15,20 @@ program
   .argument("[project-name]", "Name of your project")
   .option("--template <template>", "Project template (basic, express, graphql, monorepo, microservices)")
   .action(async (projectName, options) => {
-    
     console.log(chalk.greenBright("\n🚀 Welcome to Nodon CLI!"));
 
     let finalName = projectName;
     let finalTemplate = options.template;
 
-    // If args not provided, fallback to prompts
-    if (!projectName || !options.template) {
-      const answers = await runPrompts();
-      finalName = finalName || answers.projectName;
-      finalTemplate = finalTemplate || answers.template;
+    // Prompt for missing values only
+    if (!finalName || !finalTemplate) {
+      const answers = await runPrompts({
+        projectName: finalName,
+        template: finalTemplate,
+      });
+
+      finalName = answers.projectName;
+      finalTemplate = answers.template;
     }
 
     await copyTemplate(finalTemplate, finalName);
