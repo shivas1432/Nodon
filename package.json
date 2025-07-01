@@ -1,8 +1,8 @@
 {
   "name": "nodon",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "bin": {
-    "nodon": "./dist/cli.js"
+    "nodon": "dist/cli.js"
   },
   "scripts": {
     "build": "tsc",

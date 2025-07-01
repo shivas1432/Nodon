@@ -18,7 +18,8 @@ export async function runPrompts() {
         { name: '🔵 Basic Node + TypeScript', value: 'basic-ts' },
         { name: '🟠 Advanced REST API (Node + Express)', value: 'express-rest-api' },
         { name: '🟣 Advanced REST API (Express + TypeScript)', value: 'express-rest-ts' },
-        { name: '🔴 GraphQL API Server (Express + TypeScript)', value: 'graphql-api-ts' }
+        { name: '🔴 GraphQL API Server (Express + TypeScript)', value: 'graphql-api-ts' },
+        { name: '🟠 Microservices Starter (Multi Service)', value: 'microservices' }
       ]
     }
   ]);

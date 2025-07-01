@@ -9,24 +9,35 @@ import { logSuccess, logInfo } from "./src/utils/utils.js";
 const program = new Command();
 
 program
-  .name("nodon")
-  .description("One-command backend scaffolder for Node.js & Express")
+  .name("create-nodon")
+  .description("One-command backend scaffolder for Node.js, Express, GraphQL, Monorepo & more")
   .version("1.0.0")
-  .action(async () => {
+  .argument("[project-name]", "Name of your project")
+  .option("--template <template>", "Project template (basic, express, graphql, monorepo, microservices)")
+  .action(async (projectName, options) => {
+    
     console.log(chalk.greenBright("\n🚀 Welcome to Nodon CLI!"));
 
-    const answers = await runPrompts();
-    await copyTemplate(answers.template, answers.projectName);
-    await installDependencies(answers.projectName);
+    let finalName = projectName;
+    let finalTemplate = options.template;
+
+    // If args not provided, fallback to prompts
+    if (!projectName || !options.template) {
+      const answers = await runPrompts();
+      finalName = finalName || answers.projectName;
+      finalTemplate = finalTemplate || answers.template;
+    }
+
+    await copyTemplate(finalTemplate, finalName);
+    await installDependencies(finalName);
 
     logSuccess("\n🎉 Project created successfully!");
-    logInfo(`\n👉 cd ${answers.projectName}`);
-    if (answers.template.includes("ts")) {
+    logInfo(`\n👉 cd ${finalName}`);
+    if (finalTemplate.includes("ts")) {
       logInfo("👉 npm run dev    # Start dev server (TypeScript)");
     } else {
       logInfo("👉 npm run dev    # Start dev server (JS)");
     }
-
     console.log(chalk.cyan("\nHappy coding! 🚀\n"));
   });
 
