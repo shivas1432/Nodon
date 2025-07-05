@@ -122,7 +122,7 @@ my-app/
 
 ## 📄 License
 
-MIT © 2025 [Your Name or Organization] [MIT](https://choosealicense.com/licenses/mit/)
+MIT © 2025 Nodon [MIT](https://github.com/omprakash2929/Nodon?tab=MIT-1-ov-file)
 
 
 ## 🌐 Useful Links
