@@ -3,10 +3,18 @@
   "version": "1.0.0",
   "description": "Advanced REST API Template with Express.js",
   "main": "src/app.js",
-"scripts": {
-  "start": "node src/app.js",
-  "dev": "node --watch src/app.js"
-},
+  "type": "module",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "dev:watch": "node --watch src/app.js",
+    "lint": "eslint src --ext .js",
+    "lint:fix": "eslint src --ext .js --fix",
+    "format": "prettier --write \"src/**/*.js\"",
+    "format:check": "prettier --check \"src/**/*.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "npm run lint && npm run format:check"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
@@ -18,7 +26,25 @@
     "winston": "^3.10.0",
     "pino": "^8.17.0"
   },
-  "keywords": [],
+  "devDependencies": {
+    "nodemon": "^3.0.0",
+    "eslint": "^8.50.0",
+    "prettier": "^3.0.0"
+  },
+  "keywords": [
+    "express",
+    "rest-api",
+    "nodejs",
+    "backend",
+    "mongodb",
+    "api",
+    "javascript",
+    "es6"
+  ],
   "author": "Your Name",
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
 }
